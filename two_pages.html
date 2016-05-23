@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two pages View</title>
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script type="text/javascript" src="angular-1.5.5/angular-route.min.js"></script>
+  <script src="js/two_pages.js"></script>
+  
+</head>
+<!--   <div class="container">
+      <div class="page-header text-center">
+          <h1><span class="fa fa-anchor"></span> Our First App</h1>
+          <input type="text" name="name" ng-model="name">
+          <br>
+          <div class="alert alert-{{name}}" role="alert">Hello World - {{ name }}</div>
+          <a href="/page1">Page 1</a> - 
+          <a href="/page2">Page 2</a>
+      </div>
+    </div>
+    <div ng-view></div> -->
+<!--   <body ng-controller="MainCtrl">
+    <ul>
+      <li><a href="#/firstPage">First Page</a></li>
+      <li><a href="#/secondPage">Second Page</a></li>
+      <li><a href="#/">Back to Home</a></li>
+    </ul>
+    <div ng-view></div>
+  </body> -->
+<body>
+  <div class="container" ng-app='app'>
+    <ul>
+      <li><a href="#/firstPage">First Page</a></li>
+      <li><a href="#/secondPage">Second Page</a></li>
+      <li><a href="#/">Back to Home</a></li>
+    </ul>
+    <h1>Baltimore Ravens</h1>
+    <div ng-controller="filterTableCtrl"></div>
+      <ul ng-repeat="post in names">
+        <li>{{post.name}}</li>      
+      </ul>
+    <div ng-controller="MainCtrl">
+      <div ng-view></div>
+    </div>
+  </div>
+</body>
+</html>
